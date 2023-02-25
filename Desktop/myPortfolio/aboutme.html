@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+
+    <!-- Additional CSS must be placed after Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <title>about me</title>
+</head>
+<body>
+    <header class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1>About Me</h1>
+                </div>
+                <div class="col-md-4 col-xl-2 mt-4">
+                    <a data-toggle="modal" data-target="#contactMe" role="button" class="btn btn-info btn-lg">Contact Me</a>  
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="contactMe" class="modal fade" role="dialog">                       <!--id must match data target of modal above-->
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-info text-white">
+                    <h3 class="modal-title">Contact Me</h3>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>    <!--&times; makes an x button-->
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="col">
+                            <a role="button" class="btn btn-link" href="tel:+19705181446"><i class="fa fa-phone"></i> 1-970-518-1446<br></a>      <!-- role is for screen readers, btn link is for linking to stylesheet at top-->
+                            <a role="button" class="btn btn-link" href="mailto:dgadeken@gmail.com"><i class="fa fa-envelope-o"></i> dgadeken@gmail.com</a>
+                            <button data-dismiss="modal" class="btn btn-secondary">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-sm navbar-dark sticky-top">        <!-- navbar dark makes letters lighter color to go better with a dark navbar, stick top makes navbar stay at top of page when scrolling down-->
+        <div class="container">                                         <!-- changes padding of text menu-->
+            <a class="navbar-brand" href="home.html"><img src="img/icon.jpg" height="30" width="30" /></a>  <!-- returns to home/index.html when clicked-->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#portfolioNavbar">     <!-- creates a nav bar that collapses to three stacked lines icon in extra small viewport, ml auto pushes it to right side-->
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="portfolioNavbar">       <!--put list in div with id that matches data target-->
+                <ul class="navbar-nav">                                     <!-- this and class above cause navbar to expand on small and up viewports-->
+                    <li class="nav-item"><a class="nav-link" href="home.html"><i class="fa fa-home fa-lg"></i> Home</a></li>         <!-- nav-item-active helps with appearance and acitve is because we are on the home page-->  
+                    <li class="nav-item active"><a class="nav-link" href="#"><i class="fa fa-info fa-lg"></i> About</a></li>    <!-- nav-link changes look of navigation spacing, i class is icons, info icon large size-->
+                    <li class="nav-item"><a class="nav-link" href="portfolio.html"><i class="fa fa-list fa-lg"></i> Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contactme.html"><i class="fa fa-address-card fa-lg"></i> Contact</a></li>             <!-- # tag means just go to top of this page-->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="home.html">Home</a></li>
+                    <li class="breadcrumb-item active">About</li>
+                </ol>
+                <h2>About Me</h2>
+                <hr />
+            </div>
+        </div>
+    </div>
+
+    <p class="m-5 p-5 border border-primary">I am an aspiring full stack developer.  I am currently taking a full stack web + mobile development with Google cloud bootcamp.  This bootcamp teaches HTML, CSS, Bootstrap, React, React Native, Node.js, Google Cloud & Firebase, MongoDB, Visual Studio Code, Git, and GitHub.  I also recently completed a bachelor's degree in Cybersecurity and I have the Comp TIA Security + Certification.  </p>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 col-sm-2 offset-1">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contactme.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-sm-5 text-center">
+                    <h5>Social</h5>
+                    <a class="btn btn-social-icon btn-instagram" href="http://instagram.com/"><i class="fa fa-instagram"></i></a>   <!-- btn social icon adds custom button-->
+                    <a class="btn btn-social-icon btn-facebook" href="http://facebook.com/"><i class="fa fa-facebook"></i></a>
+                    <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+                    <a class="btn btn-social-icon btn-youtube" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <h5>Contact</h5>
+                    <a role="button" class="btn btn-link" href="tel:+9705181446"><i class="fa fa-phone"></i> 1-970-518-1446<br></a>     
+            	    <a role="button" class="btn btn-link" href="mailto:dgadeken@gmail.com"><i class="fa fa-envelope-o"></i> dgadeken@gmail.com</a>
+                </div>
+           </div>
+        </div>
+    </footer>
+
+    <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+   
+</body>
+</html>
