@@ -4,6 +4,10 @@ export const selectAllCampsites = () => {    //define and export function in sam
     return CAMPSITES;
 };
 
-export const selectRandomCampsite = () => {
-    return CAMPSITES[Math.floor(CAMPSITES.length * Math.random())];
+export const selectCampsiteById = (id) => {
+    return CAMPSITES.find((campsite) => campsite.id === id);  // find first campsite with id that is passed in 
+};
+
+export const selectFeaturedCampsite = () => {
+    return CAMPSITES.find((campsite) => campsite.featured);
 };
