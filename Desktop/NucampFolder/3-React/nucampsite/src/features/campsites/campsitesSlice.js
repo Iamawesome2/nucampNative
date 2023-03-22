@@ -5,7 +5,7 @@ export const selectAllCampsites = () => {    //define and export function in sam
 };
 
 export const selectCampsiteById = (id) => {
-    return CAMPSITES.find((campsite) => campsite.id === id);  // find first campsite with id that is passed in 
+    return CAMPSITES.find((campsite) => campsite.id === parseInt(id));  // find first campsite with id that is passed in, parseInt changes string to integer
 };
 
 export const selectFeaturedCampsite = () => {

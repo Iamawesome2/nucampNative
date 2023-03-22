@@ -2,7 +2,7 @@ import { Col, Row, } from 'reactstrap';
 import CampsiteCard from "./CampsiteCard";
 import { selectAllCampsites } from './campsitesSlice';
 
-const CampsitesList = ({ setCampsiteId }) => {    //destructure set setCampsiteId from the props object
+const CampsitesList = () => {    
     const campsites = selectAllCampsites();   
 
     return (     
@@ -13,8 +13,7 @@ const CampsitesList = ({ setCampsiteId }) => {    //destructure set setCampsiteI
                         md='5'
                         className='m-4'
                         key={campsite.id}
-                        onClick={() => setCampsiteId(campsite.id)}    /*campsite id is passed to setCampsiteId function, id changes at each iteration, col is clickable now like a button */
-                    > 
+                    >
                         <CampsiteCard campsite={campsite} /> 
                     </Col>
                 );
