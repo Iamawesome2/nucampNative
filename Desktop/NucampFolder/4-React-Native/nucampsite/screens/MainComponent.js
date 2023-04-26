@@ -1,5 +1,5 @@
 import { Platform, View } from 'react-native';
-import { Constants } from 'expo-constants';
+import Constants from 'expo-constants';
 import CampsiteInfoScreen from './CampsiteInfoScreen';
 import DirectoryScreen from './DirectoryScreen';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -11,7 +11,7 @@ const Drawer = createDrawerNavigator();
 const screenOptions = {
     headerTintColor: '#fff',
     headerStyle: { backgroundColor: '#5637DD' }
-}
+};
 
 const HomeNavigator = () => {
     const Stack = createStackNavigator();
@@ -23,7 +23,7 @@ const HomeNavigator = () => {
                 options={{ title: 'Home' }}
             />
         </Stack.Navigator>
-    )
+    );
 };
 
 const DirectoryNavigator = () => {
@@ -46,21 +46,21 @@ const DirectoryNavigator = () => {
                 })}
             />
         </Stack.Navigator>
-    )
-}
+    );
+};
 
 const Main = () => {
     return (
-        <View 
-            style={{ 
-                flex: 1, 
-                paddingTop: 
-                    Platform.OS === 'ios' ? 0 : Constants.statusBarHeight 
+        <View
+            style={{
+                flex: 1,
+                paddingTop:
+                    Platform.OS === 'ios' ? 0 : Constants.statusBarHeight
             }}
         >
             <Drawer.Navigator
                 initialRouteName='Home'
-                drawerStyle={{ backgroundColor: '#CEC8FF'}}
+                drawerStyle={{ backgroundColor: '#CEC8FF' }}
             >
                 <Drawer.Screen
                     name='Home'
